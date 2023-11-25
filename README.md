@@ -20,26 +20,7 @@ Our chosen model architecture for Named Entity Recognition (NER) tasks follows a
 2.	Bidirectional LSTM: Stacked bidirectional LSTM layers are employed to capture contextual information from both left and right sequences. These layers are vital for understanding dependencies among words and recognizing named entities.
 3.	Dense Layer: A final dense layer with softmax activation assigns labels to each word, transforming the problem into a multi-class classification task.
 ## Model Evaluation : 
-This is the most important aspect of the project. This table below shows how the model performed during its successive tests on different datasets. 
-	Performance on the test set of T1	Performance on the test set of T1 and T2	Performance on the test set of T1 and T2 and T3	Performance
-on combined
-G1+G2+G3
-Treatment
-F1	0.78	0.76	0.79	0.79
-Chronic
-Disease
-F1	0.80	0.82	0.84	0.01
-Cancer
-F1	0.78	0.80	0.84	0.81
-Allergy
-F1	0.00	0.00	0.00	0.0
-Other
-F1	1.00	1.00	0.99	0.07
-Weight
-averaged
-F1	0.621	0.612	0.636	0.631
-
-These values are fairly good considering the models are trained on a CPU machine with only 10 epoch of training and moderate complexity. Had it been trained on a better architecture, we would have surely seen better results.
+The F1 score values are fairly good considering the models are trained on a CPU machine with only 10 epoch of training and moderate complexity. Had it been trained on a better architecture, we would have surely seen better results.
 Due to very low number of entities with the category “Allergy”, none of the models are able to learn to predict this category successfully. This is the reason why we get 0 f1-scores for this category and a significantly better score for other categories.
 
 ## Discussion and Conclusion :
